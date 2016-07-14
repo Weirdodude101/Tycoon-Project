@@ -1,0 +1,1 @@
+from tycoon.base import TycoonStart
