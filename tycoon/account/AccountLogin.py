@@ -6,4 +6,4 @@ class AccountLogin(Functions):
 		Functions.__init__(self)
 
 	def initiateLogin(self):
-		pass
+		print "Login"

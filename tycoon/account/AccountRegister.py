@@ -7,4 +7,4 @@ class AccountRegister(Functions):
 		Functions.__init__(self)
 
 	def initiateRegister(self):
-		pass
+		print "Register"
