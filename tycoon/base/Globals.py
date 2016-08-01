@@ -1,0 +1,6 @@
+
+
+
+
+
+dbPath = "tycoondb/"

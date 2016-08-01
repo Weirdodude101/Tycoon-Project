@@ -14,10 +14,12 @@ class Functions(object):
 		else:
 			os.system("clear")
 
-	def displayText(self, text, clear = True):
+	def displayText(self, text, clear = True, lines = False):
 		if clear:
 			self.clearConsole()
 		print text
+		if lines:
+			print '-------------------------'
 
 	def displayOptions(self, **kwargs):
 		num = 0
@@ -33,17 +35,31 @@ class Functions(object):
 	def clearOptions(self):
 		self.optionList = []
 
-	def dumpYaml(filepath, option):
+	def dumpYaml(self, filepath, option):
 		with open(filepath, 'w') as outfile:
 			newAttb = outfile.write(yaml.dump(option,default_flow_style=False) )
 		return newAttb
 
-	def loadYaml(filepath):
+	def loadYaml(self, filepath):
 		with open(filepath, "r") as file_descriptor:
 			personInfo = yaml.load(file_descriptor)
 		return personInfo
 
-	def createYaml(filepath,option):
+	def createYaml(self, filepath,option):
 		with open(filepath, 'w') as outfile:
 			newAcc = outfile.write(yaml.dump(option,default_flow_style=False) )
 		return newAcc
+
+class Prompt():
+	def __init__(self, **kwargs):
+		self.kwargs = kwargs
+		for arg in kwargs:
+			value = raw_input(kwargs[arg] + ": ")
+			kwargs[arg] = value
+
+	def __getitem__(self, key):
+		return self.kwargs[key]
+
+
+
+
