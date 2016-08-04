@@ -3,4 +3,4 @@
 
 
 
-dbPath = "tycoondb/"
+dbPath = "tycoondb/{0}.yaml"

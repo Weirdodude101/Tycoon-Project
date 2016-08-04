@@ -1,1 +1,1 @@
-from tycoon.base import TycoonStart
+from tycoon.base import TycoonGame

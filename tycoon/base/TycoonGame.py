@@ -5,7 +5,7 @@ from tycoon.account.AccountRegister import *
 import sys
 class TycoonGame(AccountLogin, AccountRegister):
 
-	def __init__(self):
+	def __init__(self, dClear = False):
 		AccountLogin.__init__(self)
 		AccountRegister.__init__(self)
 		self.menu()
