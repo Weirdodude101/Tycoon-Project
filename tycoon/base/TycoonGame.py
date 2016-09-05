@@ -21,5 +21,5 @@ class TycoonGame(AccountLogin, AccountRegister):
 		except:
 			self.displayText("Invalid option, please try again!")
 			self.menu()
-
+		
 game = TycoonGame()
